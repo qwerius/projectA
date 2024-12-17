@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+@layer components {
+  /* Menyembunyikan scrollbar di browser berbasis WebKit (Chrome, Safari, Edge) */
+  #barkiri::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Menyembunyikan scrollbar di Firefox */
+  #barkiri {
+    scrollbar-width: none;
+  }
+
+  /* Menyembunyikan scrollbar di Internet Explorer dan Edge */
+  #barkiri {
+    -ms-overflow-style: none;
+  }
+
+  .button {
+    @apply bg-orangesawit dark:bg-hijausawitgelappisan hover:bg-hijausawitgelap dark:hover:bg-red-800  active:ring-2 active:ring-orangesawit 
+    text-white font-bold py-3 px-2 rounded-lg 
+  }
+  /* Tombol dengan warna default dan hover */
+  .btn-sidebar {
+    @apply text-hover py-2 px-4  transition duration-200 ease-in-out;
+  }
+
+  /* Tombol dengan efek hover */
+  .btn-sidebar:hover {
+    @apply bg-[#237D5B] dark:bg-[#206348]/30  dark:hover:text-hijausawit;
+  }
+
+  /* Default teks */
+  .text-primary {
+    @apply text-gray-800 dark:text-gray-300; /* Teks gelap pada light, terang pada dark */
+  }
+
+  .text-hover {
+    @apply text-white dark:text-gray-400;
+  }
+
+  .bg-primary {
+    @apply bg-abuwindow dark:bg-black; /* Latar belakang putih pada light, gelap pada dark */
+  }
+
+  .bg-card {
+    @apply bg-white dark:bg-black;
+  }
+
+  .gradient_sawit {
+    background: radial-gradient(at 50% 30%, hsla(157, 50%, 30%, 1) 0%, hsla(45, 90%, 0%, 0) 60%);
+    background-repeat: no-repeat;
+    background-size: cover; /* Optional: pastikan gradien menutupi seluruh elemen */
+  }
+  
+
+  /* From Uiverse.io by namecho */
+  .switch {
+    --button-width: 1.5em;
+    --button-height: 0.5em;
+    --toggle-diameter: 1em;
+    --button-toggle-offset: calc(
+      (var(--button-height) - var(--toggle-diameter)) / 2
+    );
+    --toggle-shadow-offset: 10px;
+    --toggle-wider: 2em;
+    --color-grey: #cccccc;
+    --color-green: #cccccc;
+  }
+
+  .slider {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .slider::after {
+    content: "";
+    display: inline-block;
+    width: var(--toggle-diameter);
+    height: var(--toggle-diameter);
+    background-color: #43b88b;
+    border-radius: calc(var(--toggle-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle-offset);
+    transform: translateX(var(--button-toggle-offset));
+    box-shadow: var(--toggle-shadow-offset) 0
+      calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
+  }
+
+  .switch input[type="checkbox"]:checked + .slider {
+    background-color: var(--color-green);
+  }
+
+  .switch input[type="checkbox"]:checked + .slider::after {
+    transform: translateX(
+      calc(
+        var(--button-width) - var(--toggle-diameter) -
+          var(--button-toggle-offset)
+      )
+    );
+    box-shadow: calc(var(--toggle-shadow-offset) * -1) 0
+      calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  }
+
+  .switch input[type="checkbox"] {
+    display: none;
+  }
+
+  .switch input[type="checkbox"]:active + .slider::after {
+    width: var(--toggle-wider);
+  }
+
+  .switch input[type="checkbox"]:checked:active + .slider::after {
+    transform: translateX(
+      calc(
+        var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)
+      )
+    );
+  }
+}
