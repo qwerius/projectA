@@ -5,7 +5,7 @@
           <!-- Logo -->
           <div class="flex items-center justify-between">
             <a href="#">
-              <img class="w-auto h-6 sm:h-7" src="/vue.svg" alt="Logo" />
+              <img class="w-auto h-6 sm:h-7" src="/logo_kopbun_kotak.svg" alt="Logo" />
             </a>
   
             <!-- Mobile menu button -->

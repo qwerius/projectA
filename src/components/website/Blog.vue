@@ -8,7 +8,7 @@
     <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom data" data-aos-duration="550" class="md:flex justify-between items-center mb-8">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold text-primary mb-2">
-          Warta Berita:
+          Info Sawit:
         </h2>
   
         <p class="text-primary">

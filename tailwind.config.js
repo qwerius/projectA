@@ -44,6 +44,7 @@ export default {
         hijausawit: '#349E75',  
         hijausawitgelap: '#237D5B',
         hijausawitgelappisan: '#194836',
+        merahsawit: '#993320',
         orangesawit: '#FEAF39',
         abuabu: '#f1f5f9',
         abuwindow: '#f3f3f3'

@@ -34,8 +34,8 @@
   }
 
   .button {
-    @apply bg-orangesawit dark:bg-hijausawitgelappisan hover:bg-hijausawitgelap dark:hover:bg-red-800  active:ring-2 active:ring-orangesawit 
-    text-white font-bold py-3 px-2 rounded-lg 
+    @apply bg-merahsawit dark:bg-hijausawitgelappisan hover:bg-hijausawitgelap dark:hover:bg-red-800  active:ring-2 active:ring-merahsawit 
+    text-white font-bold py-3 px-5 rounded-lg 
   }
   /* Tombol dengan warna default dan hover */
   .btn-sidebar {

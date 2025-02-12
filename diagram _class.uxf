@@ -1,0 +1,210 @@
+<diagram program="umletino" version="15.1"><zoom_level>3</zoom_level><element><id>UMLClass</id><coordinates><x>270</x><y>177</y><w>63</w><h>99</h></coordinates><panel_attributes>User
+--
+-id: bigint
+-nama_lengkap: char
+-divisi_block: char
+-block_plasma: char
+-no_anggota: char
+-jenis_kelamin: char
+-no_telp: char
+-alamat: char
+-email: char
+-image: image
+-role: char
+-is_active: char
+-create_date: date
+
+--
++login()
++register()
++validate()
++get()
++update()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>354</x><y>126</y><w>63</w><h>45</h></coordinates><panel_attributes>Kepengurusan
+--
+-id: bigint
+-nama_lengkap: char
+-jabatan: char
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>516</x><y>114</y><w>63</w><h>69</h></coordinates><panel_attributes>Karyawan
+--
+-id: bigint
+-nama_lengkap: char
+-jabatan: char
+-jenis_kelamin: char
+-no_telp: char
+-alamat: char
+-image: image
+-email: char
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>618</x><y>117</y><w>63</w><h>45</h></coordinates><panel_attributes>Gaji Karyawan
+--
+-id: bigint
+-nama_lengkap: char
+-gaji: decimal
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>348</x><y>342</y><w>63</w><h>69</h></coordinates><panel_attributes>Aset
+--
+-id: bigint
+-nama_aset: char
+-kondisi_aset: char
+-nilai_aset: decimal
+-create_date: date
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>348</x><y>237</y><w>63</w><h>81</h></coordinates><panel_attributes>Hamparan
+--
+-id: bigint
+-nama_blok: char
+-divisi_blok: char
+-luas_area: decimal
+-luas_tanam: decimal
+-luas_produktif: decimal
+-SPH: int
+-pokok_tanam: int
+-poko_hasil_poto_udara: int
+-create_date: date
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>444</y><w>63</w><h>66</h></coordinates><panel_attributes>Penerimaan
+--
+-id: bigint
+-tanggal_penerimaan: date
+-Produksi_blok_hamparan: int
+-tonase:
+-harga_tbs: decimal
+-hutang: decimal
+-lainnya: decimal
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>399</x><y>438</y><w>63</w><h>54</h></coordinates><panel_attributes>Hutang
+--
+-id: bigint
+-tanggal_hutang: date
+-sumber_hutang: char
+-jumlah: decimal
+-text_rupiah: char
+-tanggal_perjanjian_pembayaran: date
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>465</x><y>501</y><w>63</w><h>54</h></coordinates><panel_attributes>Pajak
+--
+-id: bigint
+-biaya_pajak_pbb: decimal
+-jenis_pajak_lain: char
+-biaya_pajak_lain: decimal
+-tanggal_pembayaran: date
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>462</x><y>291</y><w>63</w><h>117</h></coordinates><panel_attributes>Pengeluaran
+--
+-id: bigint
+-jenis_pengeluaran_pekerjaan_tanah: char
+-biaya_pengeluaran_pekerjaan_tanah: decimal
+-jenis_pengeluaran_bibit: char
+-biaya_bibit: decimal
+-jenis_pengeluaran_pemeliharaan: char
+-biaya_pengeluaran_pemeliharaan: char
+-jenis_pengeluaran_infrastruktur: char
+-biaya_pengeluaran_infrastruktur: decimal
+-jenis_pengeluaran_tenaga_kerja: char
+-biaya_pengeluaran_tenaga_kerja: decimal
+-biaya_pengeluaran_pemanenan: char
+-biaya_pengeluaran_pemanenan: decimal
+-jenis_pengeluaran_administrasi: char
+-biaya_pengeluaran_administrasi: decimal
+-jenis_pengeluaran_lain: char
+-biaya_pengeluaran_lain: decimal
+-date_create: date
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>561</x><y>237</y><w>63</w><h>66</h></coordinates><panel_attributes>ProduksiBlockHamparan
+--
+-id: bigint
+-block: chart
+-luas_area_intri: decimal
+-luas_area_plasma: decimal
+-persentase_area_plama: decimal
+-tahun_tanam: char
+
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>432</x><y>180</y><w>63</w><h>57</h></coordinates><panel_attributes>Program Kerja
+--
+-id: bigint
+-rencana: char
+-tanggal_penerapan: date
+-anggaran_rencana: decimal
+-date_create: date
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>561</x><y>414</y><w>63</w><h>75</h></coordinates><panel_attributes>LaporanSisaUsaha
+--
+-id: bigint
+-penjualan: decimal
+-potongan_pph: decimal
+-penjualan_setelah_pajak: decimal
+-biaya_lain: decimal
+-jenis_biaya_lain: char
+-SHU_sebelum dibagi: decimal
+-Hutang: decimal
+-Sisa_hasil_usaha: decimal
+-Hasil_shu_individu: decimal
+
+--
++get()
++post()
++update()
++delete()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>405</y><w>81</w><h>51</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>250;150;10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>459</x><y>462</y><w>108</w><h>9</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>471</y><w>81</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>250;10;10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>621</x><y>450</y><w>45</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;110</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>153</y><w>42</w><h>60</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes><additional_attributes>10;180;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>135</y><w>48</w><h>15</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>408</x><y>270</y><w>159</w><h>15</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes><additional_attributes>10;20;510;20</additional_attributes></element><element><id>Relation</id><coordinates><x>588</x><y>300</y><w>105</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes><additional_attributes>10;10;10;220;330;480</additional_attributes></element><element><id>Relation</id><coordinates><x>291</x><y>273</y><w>411</w><h>354</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes><additional_attributes>10;10;30;1160;1350;790</additional_attributes></element></diagram>

@@ -1,12 +1,13 @@
 <template>
-    <nav class=" h-16 flex bg-primary   w-full border-1 border-b dark:border-gray-700 bg-white sticky top-0 z-1000">
+    <nav class=" h-16 flex bg-primary   w-full border-1 border-b dark:border-gray-700 bg-merahsawit sticky top-0 z-1000">
       <div class=" px-4 py-3 mx-auto w-full">
         <div class="lg:flex lg:items-center lg:justify-between">
           <!-- Logo -->
           <div class="flex items-center justify-between">
-            <a href="#">
-              <img class="w-auto h-6 sm:h-7" src="/vue.svg" alt="Logo" />
-            </a>
+            <div class="flex flex-row items-center gap-4">
+              <img class="w-auto sm:h-10" src="/logo_kopbun_kotak.svg" alt="Logo" />
+              <span class="text-2xl text-white font-nunito font-bold text-primary">Kopbun</span>
+            </div>
   
             <!-- Mobile menu button -->
             <div class="flex lg:hidden">
@@ -29,11 +30,11 @@
           <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
           <div class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out  lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
             <div class="hidden lg:flex flex-col  -mx-6 lg:flex-row lg:items-center lg:mx-8 gap-10">
-              <a href="#" class="px-3 py-2 text-primary hover:text-hijausawit ">Home</a>
+              <a href="/" class="px-3 py-2 text-primary hover:text-hijausawit ">Home</a>
               <a href="#" class="px-3 py-2 text-primary hover:text-hijausawit">Daftar Anggota</a>
               <a href="#" class="px-3 py-2 text-primary hover:text-hijausawit">Peta</a>
               <a v-if="!isAuth" href="#" class="px-3 py-2 text-primary hover:text-hijausawit">Berita</a>
-              <router-link to="/dashboard"  class="px-3 py-2 text-primary hover:text-hijausawit">Login</router-link>
+              <router-link to="/login"  class="px-3 py-2 text-primary hover:text-hijausawit">Login</router-link>
               
               
             </div>
